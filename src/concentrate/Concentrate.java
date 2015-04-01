@@ -216,7 +216,7 @@ public final class Concentrate extends JFrame implements ActionListener {
     } 
     
 
-     
+    
     //the playGame method sets all the game rules 
     public void playGame(){
         int PairsFound;
