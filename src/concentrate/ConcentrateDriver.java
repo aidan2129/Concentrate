@@ -10,45 +10,29 @@
  */
 
 package concentrate;
-
-
-import javax.swing.JFrame;
-
 import javax.swing.SwingUtilities;
-import javax.swing.WindowConstants;
 
+public class ConcentrateDriver {
 
-public class ConcentrateDriver
-{
-    private Concentrate game;
-    private GameButtonPanel panel;
+  private Concentrate game;
+  private GameButtonPanel panel;
 
-    private GameButtonListener buttonListener;
-    
-    public ConcentrateDriver(String frameTitle)
-    {
-        panel = new GameButtonPanel();
-        game = panel.game;
-        
-        SwingUtilities.invokeLater(
-            new Runnable()
-            {
-                public void run(){
-                    Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
-                    createGUI();
-                }
-            });
-    }
-    
+  public ConcentrateDriver(String frameTitle) {
+    panel = new GameButtonPanel();
+    game = panel.game;
 
-     public void createGUI() {  
+    SwingUtilities.invokeLater(
+      new Runnable() {
+        public void run() {
+          Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+        }
+      }
+    );
+  }
 
-    }
-    
-    public static void main(String[] args)
-    {
-        ConcentrateDriver driver = new ConcentrateDriver("Concentrate");
-        driver.game.playGame();
-        System.exit(0);
-    }
+  public static void main(String[] args) {
+    ConcentrateDriver driver = new ConcentrateDriver("Concentrate");
+    driver.game.playGame();
+    System.exit(0);
+  }
 }

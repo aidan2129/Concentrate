@@ -5,9 +5,6 @@
  */
 
 package concentrate;
-
-
-import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -18,24 +15,21 @@ import javax.swing.JPanel;
  */
 
 //below is the panel taht all the buttons will be displayed on
-public class GameButtonPanel extends JPanel
-{
-    private Dimension size;
-    Concentrate game;
-    
-    public GameButtonPanel(ArrayList<Card> shuffleButtons)
-    {
-        int numPerLine = (int)(Math.sqrt(Concentrate.numCards));
- 
-        setLayout(new GridLayout(numPerLine, numPerLine));
-        setOpaque(false);
+public class GameButtonPanel extends JPanel {
 
-    }
+  Concentrate game;
 
-    public GameButtonPanel() {
-        int numPerLine = (int)(Math.sqrt(Concentrate.numCards));
- 
-        setLayout(new GridLayout(numPerLine, numPerLine));
-        setOpaque(false);
-    }   
+  public GameButtonPanel(ArrayList<Card> shuffleButtons) {
+    int numPerLine = (int) (Math.sqrt(Concentrate.numCards));
+
+    setLayout(new GridLayout(numPerLine, numPerLine));
+    setOpaque(false);
+  }
+
+  public GameButtonPanel() {
+    int numPerLine = (int) (Math.sqrt(Concentrate.numCards));
+
+    setLayout(new GridLayout(numPerLine, numPerLine));
+    setOpaque(false);
+  }
 }
